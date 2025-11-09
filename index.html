@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azeurix Studios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-container" id="logoContainer">
+                    <h1 class="logo" id="logoText">Azeurix Studios</h1>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-primary" id="viewerBtn">Viewer Mode</button>
+                    <button class="btn btn-secondary" id="adminBtn">Admin Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminId">Admin ID</label>
+                    <input type="text" id="adminId" placeholder="Enter Admin ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <p class="error-message" id="errorMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="container">
+            <div class="admin-header">
+                <h3>Admin Edit Mode</h3>
+                <div>
+                    <button class="btn btn-success" id="saveBtn">Save Changes</button>
+                    <button class="btn btn-danger" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="movie-title" id="movieTitle" contenteditable="false">
+                    The Untold Story
+                </h2>
+                <p class="tagline">A Cinematic Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper" id="videoWrapper">
+                <iframe 
+                    id="movieVideo"
+                    src="https://drive.google.com/file/d/1ujGurPE9SyqHnY8xnSkjBVz8Y-aF0zSx/preview"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="autoplay"
+                ></iframe>
+            </div>
+            <div class="edit-field" id="editVideoLink" style="display: none;">
+                <label>Video Link (Google Drive):</label>
+                <input type="text" id="videoLinkInput" placeholder="Enter Google Drive file ID or full link">
+                <small>Example: 1ujGurPE9SyqHnY8xnSkjBVz8Y-aF0zSx or full link</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cast & Crew Section -->
+    <section class="content-section">
+        <div class="container">
+            <h3 class="section-title">Cast & Crew</h3>
+            <div class="section-content" id="castCrew" contenteditable="false">
+                <p><strong>Director:</strong> John Doe</p>
+                <p><strong>Producer:</strong> Jane Smith</p>
+                <p><strong>Lead Actor:</strong> Alex Johnson</p>
+                <p><strong>Cinematography:</strong> Sarah Williams</p>
+                <p><strong>Music:</strong> Michael Brown</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h3 class="section-title">About the Film</h3>
+            <div class="section-content" id="about" contenteditable="false">
+                <p>
+                    An epic journey through time and space, exploring the depths of human emotion 
+                    and the power of storytelling. This groundbreaking animation pushes the boundaries 
+                    of visual artistry and narrative innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section class="content-section">
+        <div class="container">
+            <h3 class="section-title">Credits</h3>
+            <div class="section-content" id="credits" contenteditable="false">
+                <p><strong>Animation Studio:</strong> Azeurix Studios</p>
+                <p><strong>Visual Effects:</strong> Digital Dreams VFX</p>
+                <p><strong>Sound Design:</strong> Audio Artistry Inc.</p>
+                <p><strong>Special Thanks:</strong> Our amazing team and supporters</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Azeurix Studios | Created by Azeezurrahman</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
